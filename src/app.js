@@ -2,6 +2,10 @@ import express from "express";
 import pacientesRoutes from './routes/pacientes.routes.js'
 import medicosRoutes from './routes/medicos.routes.js'
 import turnosRoutes from './routes/turnos.routes.js'
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 
 
 const app = express();

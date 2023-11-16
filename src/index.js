@@ -4,11 +4,12 @@ import "./model/pacientes.js";
 import "./model/medicos.js";
 
 async function main() {
+  const port = process.env.PORT || 3001
   try {
     await sequelize.sync({ force: false });
     console.log("Conexion a base de datos exitosa");
-    app.listen(3001);
-    console.log("Server running on port 3001");
+    app.listen(port);
+    console.log(`Server running on port ${port}`);
   } catch (error) {
     console.error("No funciona el sequelize: ", error);
   }
