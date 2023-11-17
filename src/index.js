@@ -4,7 +4,7 @@ import "./model/pacientes.js";
 import "./model/medicos.js";
 
 async function main() {
-  const port = 5432
+  const port = process.env.PORT || 8080
   try {
     await sequelize.sync({ force: false });
     console.log("Conexion a base de datos exitosa");
